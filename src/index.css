@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide default cursor */
+* {
+  cursor: none !important;
+}
+
+/* Custom CSS variables for dynamic gradients */
+:root {
+  --scroll-gradient: linear-gradient(135deg, hsl(220, 70%, 95%) 0%, hsl(280, 60%, 98%) 100%);
+  --scroll-gradient-dark: linear-gradient(135deg, hsl(220, 30%, 8%) 0%, hsl(280, 25%, 5%) 100%);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+}
+
+/* Performance optimizations */
+.animate-gradient-flow,
+.animate-gradient-shift,
+.animate-gradient-x {
+  will-change: background-position;
+}
+
+.animate-float,
+.animate-sparkle,
+.animate-twinkle {
+  will-change: transform, opacity;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-gradient-flow,
+  .animate-gradient-shift,
+  .animate-gradient-x,
+  .animate-shimmer,
+  .animate-sparkle,
+  .animate-letter-glow,
+  .animate-pulse-glow,
+  .animate-float,
+  .animate-twinkle,
+  .animate-letter-float {
+    animation: none;
+  }
+}
