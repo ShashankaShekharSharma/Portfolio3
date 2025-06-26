@@ -41,41 +41,43 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className={`group relative bg-gradient-to-br from-white via-gray-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-700 transform hover:-translate-y-2 ${
-                project.featured ? 'lg:col-span-2' : ''
-              } ${isVisible ? `opacity-100 translate-y-0 delay-${index * 200}` : 'opacity-0 translate-y-8'} transition-all duration-1000`}
-            >
-              {/* Project Status Badge */}
-              <div className="flex items-center justify-between mb-6">
-                <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold ${getStatusColor(project.status)}`}>
-                  {getStatusIcon(project.status)}
-                  {project.status}
-                </span>
-                {project.featured && (
-                  <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 text-amber-800 dark:text-amber-300 rounded-full text-sm font-semibold">
-                    <Star size={12} />
-                    Featured
-                  </span>
-                )}
-              </div>
+          {projects.map((project, index) => {
+            const isQuantumProject = project.title.toLowerCase().includes('quantum');
 
-              <div className={`${project.featured ? 'lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center' : ''}`}>
+            return (
+              <div
+                key={project.id}
+                className={`group relative bg-gradient-to-br from-white via-gray-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-700 transform hover:-translate-y-2 ${
+                  project.featured ? 'lg:col-span-2' : ''
+                } ${isVisible ? `opacity-100 translate-y-0 delay-${index * 200}` : 'opacity-0 translate-y-8'} transition-all duration-1000`}
+              >
+                {/* Project Status Badge */}
+                <div className="flex items-center justify-between mb-6">
+                  <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold ${getStatusColor(project.status)}`}>
+                    {getStatusIcon(project.status)}
+                    {project.status}
+                  </span>
+                  {project.featured && (
+                    <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 text-amber-800 dark:text-amber-300 rounded-full text-sm font-semibold">
+                      <Star size={12} />
+                      Featured
+                    </span>
+                  )}
+                </div>
+
                 <div>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold mb-4">
                     {project.subtitle}
                   </p>
-                  
+
                   <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech, techIndex) => (
                       <span
@@ -88,33 +90,25 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
 
-                {project.featured && (
-                  <div className="hidden lg:block">
-                    <div className="relative">
-                      <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 to-purple-900 rounded-2xl flex items-center justify-center border border-blue-200 dark:border-blue-700">
-                        <div className="text-6xl opacity-20">🚀</div>
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent rounded-2xl" />
-                    </div>
+                {!isQuantumProject && (
+                  <div className="flex gap-3 pt-4">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                    >
+                      <Github size={16} />
+                      Code
+                    </a>
                   </div>
                 )}
-              </div>
 
-              <div className="flex gap-3 pt-4">
-                <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
-                  <Github size={16} />
-                  Code
-                </button>
-                <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition-colors">
-                  <ExternalLink size={16} />
-                  Demo
-                </button>
+                {/* Hover Effect Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>
-
-              {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

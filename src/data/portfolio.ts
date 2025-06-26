@@ -2,9 +2,12 @@ export const personalInfo = {
   name: "Shashanka Shekhar Sharma",
   role: "AI Research Enthusiast | Innovator | Quantum Explorer",
   tagline: "Blending AI with Quantum Futures. Where Code Meets Curiosity.",
-  email: "shashanka.sharma@domain.com",
-  phone: "+91 XXXXX XXXXX",
-  location: "Chennai, India"
+  email: "shashankadps@gmail.com",
+  phone: "+91 80119 22099",
+  location: "Chennai, India",
+  github: 'https://github.com/ShashankaShekharSharma',
+  linkedin: 'https://www.linkedin.com/in/shashanka-shekhar-sharma/',
+  twitter: 'https://x.com/shashanka_s_s',
 };
 
 export const experiences = [
@@ -50,6 +53,7 @@ export const projects = [
     description: "Novel AI architecture combining quantum principles with deep learning models for enhanced computational efficiency and breakthrough performance.",
     technologies: ["Quantum Computing", "Transformers", "Deep Learning", "Python", "Qiskit"],
     status: "Research",
+    github: "",
     featured: true
   },
   {
@@ -59,6 +63,7 @@ export const projects = [
     description: "Intelligent agricultural assistant that detects plant diseases and recommends remedies using advanced computer vision and image-based diagnosis.",
     technologies: ["Computer Vision", "Agriculture AI", "Mobile App", "TensorFlow", "React Native"],
     status: "Deployed",
+    github: "https://github.com/Anushreerathi12/KrishiMitra",
     featured: true
   },
   {
@@ -68,7 +73,8 @@ export const projects = [
     description: "Feature-rich web browser with integrated multi-search engine, AI chatbot, and privacy-focused features for enhanced user experience.",
     technologies: ["Python", "Web Technologies", "Privacy", "AI Integration", "GUI"],
     status: "Completed",
-    featured: false
+    github: "https://github.com/hrishi-sarma/browsit",
+    featured: true
   }
 ];
 

@@ -28,36 +28,19 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <div className="space-y-2">
-              {['Experience', 'Projects', 'Education', 'Achievements'].map((link) => (
-                <button
-                  key={link}
-                  onClick={() => {
-                    const element = document.getElementById(link.toLowerCase());
-                    if (element) element.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="block text-gray-400 hover:text-white transition-colors"
-                >
-                  {link}
-                </button>
-              ))}
-            </div>
-          </div>
+    
 
           {/* Social Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
             <div className="flex gap-4">
-              <button className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition-colors">
+              <button className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition-colors" onClick={() => window.open(personalInfo.github, '_blank')}>
                 <Github size={20} />
               </button>
-              <button className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition-colors">
+              <button className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition-colors" onClick={() => window.open(personalInfo.linkedin, '_blank')}>
                 <Linkedin size={20} />
               </button>
-              <button className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition-colors">
+              <button className="p-3 bg-gray-800 hover:bg-blue-600 rounded-lg transition-colors" onClick={() => window.open(personalInfo.twitter, '_blank')}>
                 <Twitter size={20} />
               </button>
             </div>
