@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 const certifications = [
+  { file: 'iitmshashanka.pdf', title: 'Data Science IITM' },
   { file: 'Coursera H4PH005TWSVE.pdf', title: 'Cloud Computing' },
   { file: 'Coursera FEU5HBQZ50X3.pdf', title: 'Automating Cybersecurity' },
   { file: 'Coursera CZZ79N22DLSZ.pdf', title: 'Digital Marketing' },
@@ -17,6 +18,7 @@ const certifications = [
   { file: 'Advanced MySQL Topics .pdf', title: 'Advanced MySQL' },
   { file: 'Play It Safe_ Manage Security Risks .pdf', title: 'Security Risks' },
   { file: 'Data Analyst Career Guide and Interview Preparation.pdf', title: 'Analyst Career Guide' },
+  
 ];
 
 const Certifications = () => {
