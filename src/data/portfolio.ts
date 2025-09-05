@@ -75,6 +75,16 @@ export const projects = [
     status: "Completed",
     github: "https://github.com/hrishi-sarma/browsit",
     featured: true
+  },
+    {
+    id: 4,
+    title: "ChikitchakAI",
+    subtitle: "Hospital Patient pipeline automation",
+    description: "Automatic basic OPD tasks so that the crowd in OPD of Goverment hospitals can be managed",
+    technologies: ["Python", "Web Technologies", "Privacy", "AI Integration", "GUI"],
+    status: "Completed",
+    github: "https://github.com/ShashankaShekharSharma/ChikitchakAI_AMUHACKS4.0",
+    featured: true
   }
 ];
 
