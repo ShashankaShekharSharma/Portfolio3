@@ -106,9 +106,9 @@ export const awards = [
 export const education = [
   {
     institution: "SRM Institute of Science and Technology, Chennai",
-    degree: "B.Sc. in Computer Science",
+    degree: "B.Tech in Computer Science and Engineering",
     period: "May 2027",
-    cgpa: "9.2"
+    cgpa: "9.3"
   },
   {
     institution: "Indian Institute of Technology, Madras",
