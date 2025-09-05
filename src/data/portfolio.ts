@@ -79,7 +79,8 @@ export const projects = [
 ];
 
 export const awards = [
-  "Outstanding Student of the Year – SRMIST",
+  "JP Morgan Chase & Co. Code for Good Hackathon 2025 Winner",
+  "2xOutstanding Student of the Year – SRMIST (2024 and 2025)",
   "3rd Best Research Poster – National Quantum Quest, IIT Kanpur",
   "Best Workpiece Presentation – Civil & Mechanical Division, SRMIST"
 ];
@@ -93,7 +94,7 @@ export const education = [
   },
   {
     institution: "Indian Institute of Technology, Madras",
-    degree: "B.Sc. in Data Science and Applications",
+    degree: "B.S in Data Science and Applications",
     period: "May 2027",
     cgpa: "7.5"
   },
