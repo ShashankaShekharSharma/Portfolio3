@@ -12,15 +12,15 @@ export const personalInfo = {
 
 export const experiences = [
   {
-    id: 1,
+    id: 3,
     company: "SAMSUNG RESEARCH",
     role: "Research Intern",
-    period: "Mar 2025",
+    period: "Mar 2025 - Present",
     description: "Researched Transformer Model Compression; Integrated Quantum Annealing to enhance inference efficiency.",
     technologies: ["Quantum Computing", "Transformers", "Model Compression", "Deep Learning"]
   },
   {
-    id: 2,
+    id: 4,
     company: "THINKAI",
     role: "Research Intern",
     period: "Aug 2024 – Sep 2024",
@@ -28,17 +28,25 @@ export const experiences = [
     technologies: ["AI/ML", "Production Models", "Client Solutions", "Python"]
   },
   {
-    id: 3,
+    id: 1,
     company: "INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI",
-    role: "Research Intern",
-    period: "May 2025 - July 2025",
+    role: "Summer Intern",
+    period: "May 2025 - Present",
     description: " Research on Machine Learning and Artificial Intelligence",
     technologies: ["Quantum Computing", "Transformers", "Deep Learning", "Python", "Qiskit"]
   },
   {
-    id: 4,
+    id: 5,
+    company: "INDIAN INSTITUTE OF TECHNOLOGY KHARAGPUR",
+    role: "Intern",
+    period: "May 2025 – Present",
+    description: "Worked on Graph Machine Learning to solve Cold Start Problem",
+    technologies: ["GML", "LLM", "Model Optimization", "Research"]
+  },
+  {
+    id: 2,
     company: "INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI",
-    role: "Research Intern",
+    role: "Summer Intern",
     period: "May 2024 – Jul 2024",
     description: "Developed Relation Extraction and Classification Models; Conducted Evaluation and Optimization.",
     technologies: ["NLP", "Classification", "Model Optimization", "Research"]
